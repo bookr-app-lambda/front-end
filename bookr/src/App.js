@@ -1,14 +1,21 @@
-import React from "react";
-import logo from "./logo.svg";
+
+import React from 'react';
+import {BrowserRouter as Router, Route, Link} from 'react-router-dom';
+import PrivateRoute from './PrivateRoute/PrivateRoute';
+import Login from './components/Login/Login';
+import SignUp from './components/SignUp/SignUp';
 import BookList from "./components/BookList.js";
-import "./App.css";
+import './App.css';
 
 function App() {
   return (
-    <div className="App">
-      <h1>BOOKR - Site Coming Soon ;)</h1>
-      <BookList />
-    </div>
+    <Router>
+      <div className='App container'>
+        <Route exact path='/signup' component={SignUp} />
+        <Route exact path='/login' component={Login} />
+        <Route exact path='/' component={Login} />
+      </div>
+    </Router>
   );
 }
 

@@ -1,7 +1,7 @@
-import React from "react";
+// import React from "react";
 
-// Component that displays reviews
+// // Component that displays reviews
 
-export default function Reviews() {
-  //code goes here
-}
+// export default function Reviews() {
+//   //code goes here
+// }

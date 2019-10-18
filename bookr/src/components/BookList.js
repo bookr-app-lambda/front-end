@@ -1,3 +1,4 @@
+
 import React from "react";
 import Header from "./Header.js";
 import BookCard from "./BookCard.js";
@@ -10,9 +11,11 @@ const BookListDiv = styled.div`
   justify-content: space-around;
 `;
 
-// "Landing page" of the actual app
-// displays a list of books (retrieved from API call) as a series
-// of BookCard components
+
+// // "Landing page" of the actual app
+// // displays a list of books (retrieved from API call) as a series
+// // of BookCard components
+
 
 console.log(books);
 export default function BookList() {
@@ -37,3 +40,4 @@ export default function BookList() {
     </div>
   );
 }
+
