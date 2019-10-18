@@ -1,6 +1,5 @@
 import React from "react";
-
-// Header/Nav component
+import styled from "styled-components";
 
 export default function Header() {
   //code goes here
