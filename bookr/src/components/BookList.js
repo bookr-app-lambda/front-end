@@ -1,4 +1,5 @@
 import React from "react";
+import Header from "./Header.js";
 
 // "Landing page" of the actual app
 // displays a list of books (retrieved from API call) as a series
@@ -6,4 +7,12 @@ import React from "react";
 
 export default function BookList() {
   //code goes here
+
+  //axios call
+
+  return (
+    <div>
+      <Header />
+    </div>
+  );
 }
