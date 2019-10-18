@@ -5,4 +5,5 @@ import React from "react";
 
 export default function RegistrationForm() {
   //code goes here
+  return <div>Reg Boilerplate</div>;
 }

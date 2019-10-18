@@ -4,4 +4,8 @@ import React from "react";
 
 export default function Reviews() {
   //code goes here
+
+  const [reviews, setReview] = React.useState([]);
+
+  return <div>Reviews page...</div>;
 }

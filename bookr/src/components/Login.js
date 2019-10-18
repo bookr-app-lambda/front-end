@@ -4,4 +4,5 @@ import React from "react";
 
 export default function Login() {
   //code goes here
+  return <div>Login boilerplate</div>;
 }
