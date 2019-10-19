@@ -14,11 +14,7 @@ const BookListDiv = styled.div`
 // displays a list of books (retrieved from API call) as a series
 // of BookCard components
 
-<<<<<<< HEAD
-
-=======
 console.log(books);
->>>>>>> origin
 export default function BookList() {
   //code goes here
 
