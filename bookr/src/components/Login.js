@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
-import { axiosWithAuth } from './AxiosAuth.js';
+
 import axios from 'axios';
+import {Redirect} from 'react-router-dom';
 
 // Form Component that lets user log in, takes a username and password
 
@@ -25,8 +26,7 @@ export default function Login(props) {
         console.log(res.data.user);
         console.log(res.data.user.token);
         alert("logged in");
-        props.history.push('/');
-        
+        props.history.push('/books');
       }).catch(err => console.log(err));
   };
   const handleSubmit = event => {
