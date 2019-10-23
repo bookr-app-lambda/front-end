@@ -1,5 +1,5 @@
 import React, {Component} from 'react';
-//  import ReactStars from 'react-stars';
+ import ReactStars from 'react-stars';
 
 class Reviews extends Component {
   state = {
@@ -63,7 +63,7 @@ class Reviews extends Component {
                     name='review'
                     className='form-control form-control-lg '
                   />
-                  {/* <ReactStars onChange={this.onChangeHandler} count={5} value={this.state.rating} /> */}
+                  <ReactStars onChange={this.onChangeHandler} count={5} value={this.state.rating} />
                   <div class='modal-footer'>
                     <button type='button' class='btn btn-secondary' data-dismiss='modal'>
                       Close
