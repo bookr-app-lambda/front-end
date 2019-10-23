@@ -1,9 +1,14 @@
+<<<<<<< HEAD
 import React, {Component} from 'react';
  import ReactStars from 'react-stars';
+=======
+import React, { Component } from "react";
+import ReactStars from "react-stars";
+>>>>>>> 7de55a2e4599f9cfd8346d0455c3464caa3a46dd
 
 class Reviews extends Component {
   state = {
-    review: '',
+    review: "",
     rating: 0
   };
 
@@ -25,50 +30,71 @@ class Reviews extends Component {
     e.preventDefault();
     this.props.addReview(this.state, this.props.bookId);
   };
+
   render() {
     return (
       <div>
         <button
-          type='button'
-          class='btn btn-primary'
-          data-toggle='modal'
-          data-target='#exampleModal'
+          type="button"
+          class="btn btn-primary"
+          data-toggle="modal"
+          data-target="#exampleModal"
         >
           Add Review
         </button>
+
         <div
-          class='modal fade'
-          id='exampleModal'
-          tabindex='-1'
-          role='dialog'
-          aria-labelledby='exampleModalLabel'
-          aria-hidden='true'
+          class="modal fade"
+          id="exampleModal"
+          tabindex="-1"
+          role="dialog"
+          aria-labelledby="exampleModalLabel"
+          aria-hidden="true"
         >
-          <div class='modal-dialog' role='document'>
-            <div class='modal-content'>
-              <div class='modal-header'>
-                <h5 class='modal-title' id='exampleModalLabel'>
+          <div class="modal-dialog" role="document">
+            <div class="modal-content">
+              <div class="modal-header">
+                <h5 class="modal-title" id="exampleModalLabel">
                   Add Review
                 </h5>
-                <button type='button' class='close' data-dismiss='modal' aria-label='Close'>
-                  <span aria-hidden='true'>&times;</span>
+                <button
+                  type="button"
+                  class="close"
+                  data-dismiss="modal"
+                  aria-label="Close"
+                >
+                  <span aria-hidden="true">&times;</span>
                 </button>
               </div>
-              <div class='modal-body'>
+              <div class="modal-body">
                 <form onSubmit={this.addComment}>
                   <input
-                    type='text'
-                    placeholder='comment...'
+                    type="text"
+                    placeholder="comment..."
                     onChange={this.handleChange}
-                    name='review'
-                    className='form-control form-control-lg '
+                    name="review"
+                    className="form-control form-control-lg "
                   />
+                  <ReactStars
+                    onChange={this.onChangeHandler}
+                    count={5}
+                    value={this.state.rating}
+                  />
+<<<<<<< HEAD
                   <ReactStars onChange={this.onChangeHandler} count={5} value={this.state.rating} />
                   <div class='modal-footer'>
                     <button type='button' class='btn btn-secondary' data-dismiss='modal'>
+=======
+                  <div class="modal-footer">
+                    <button
+                      type="button"
+                      class="btn btn-secondary"
+                      data-dismiss="modal"
+                    >
+>>>>>>> 7de55a2e4599f9cfd8346d0455c3464caa3a46dd
                       Close
                     </button>
-                    <button class='btn btn-primary'>Post</button>
+                    <button class="btn btn-primary">Post</button>
                   </div>
                 </form>
               </div>
