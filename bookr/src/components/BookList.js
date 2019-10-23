@@ -1,6 +1,7 @@
 import React, {useState, useEffect} from "react";
 import Header from "./Header.js";
 import BookCard from "./BookCard.js";
+import {Link} from 'react-router-dom';
 
 import styled from "styled-components";
 import { axiosWithAuth } from './AxiosAuth.js';
@@ -42,11 +43,13 @@ export default function BookList(props) {
       <BookListDiv>
         {books.map(book => {
           return (
+            <Link to={`/books/${book.id}`}>
             <BookCard
               cover={book.cover}
               title={book.title}
               rating={book.averageRating}
             />
+            </Link>
           );
         })}
       </BookListDiv>

@@ -1,6 +1,7 @@
 import React from 'react';
 import logo from './logo.svg';
 import BookList from './components/BookList.js';
+//import BookInfo from './components/BookInfo.js';
 import './App.css';
 import { Route, Link } from 'react-router-dom';
 import Login from './components/Login.js'
@@ -23,6 +24,7 @@ const clearIt = (event) =>{
 
       <Route exact path="/login" component={Login} />
       <PrivateRoute path="/books" component={BookList}/>
+      {/**<PrivateRoute path='/books/:id' component={BookInfo}/>**/}
     </div>
   );
 }

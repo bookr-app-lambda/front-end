@@ -1,4 +1,4 @@
-import React from 'react';
+//import React from 'react';
 import axios from 'axios';
 
 export const axiosWithAuth =() => {
@@ -9,5 +9,7 @@ export const axiosWithAuth =() => {
             'Content-Type': 'application/json',
             'Authorization': `${token}`,
         },
+        baseURL: 'https://api-bookr.herokuapp.com/api/'
     });
+
 };
