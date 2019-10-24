@@ -25,6 +25,10 @@ export const REVIEW_START = 'REVIEW_START';
 export const REVIEW_SUCCESS = 'REVIEW_SUCCESS';
 export const REVIEW_ERROR = 'REVIEW_ERROR';
 
+export const DELETE_START = 'DELETE_START';
+export const DELETE_SUCCESS = 'DELETE_SUCCESS';
+export const DELETE_ERROR = 'DELETE_ERROR';
+
 export const login = state => dispatch => {
   dispatch({type: LOGIN_START});
   return axiosWithAuth()
@@ -102,10 +106,32 @@ export const addReview = (review, id) => dispatch => {
           rating: res.data.review.rating,
           review: res.data.review.content
         }
+        
       });
+      
     })
     .catch(err => {
       console.log('ERROORRRRR', err);
       dispatch({type: REVIEW_ERROR, payload: err.response});
+    });
+};
+
+export const deleteReview = ( id) => dispatch => {
+  console.log( id);
+  dispatch({type: DELETE_START});
+  return axiosWithAuth()
+    .delete(`https://api-bookr.herokuapp.com/api/reviews/${id}`)
+    .then(res => {
+      console.log('NO ERRORRRRR');
+      console.log('LOOk for this ====> ',  res.data );
+      dispatch({
+        type: DELETE_SUCCESS,
+        
+      });
+    })
+    .catch(err => {
+      console.log('ERROORRRRR', err);
+      
+      dispatch({type: DELETE_ERROR, payload: err.response});
     });
 };

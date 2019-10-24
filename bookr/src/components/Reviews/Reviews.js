@@ -1,10 +1,5 @@
-<<<<<<< HEAD
-import React, {Component} from 'react';
- import ReactStars from 'react-stars';
-=======
 import React, { Component } from "react";
 import ReactStars from "react-stars";
->>>>>>> 7de55a2e4599f9cfd8346d0455c3464caa3a46dd
 
 class Reviews extends Component {
   state = {
@@ -29,6 +24,7 @@ class Reviews extends Component {
     console.log(this.props);
     e.preventDefault();
     this.props.addReview(this.state, this.props.bookId);
+    
   };
 
   render() {
@@ -80,18 +76,12 @@ class Reviews extends Component {
                     count={5}
                     value={this.state.rating}
                   />
-<<<<<<< HEAD
-                  <ReactStars onChange={this.onChangeHandler} count={5} value={this.state.rating} />
-                  <div class='modal-footer'>
-                    <button type='button' class='btn btn-secondary' data-dismiss='modal'>
-=======
                   <div class="modal-footer">
                     <button
                       type="button"
                       class="btn btn-secondary"
                       data-dismiss="modal"
                     >
->>>>>>> 7de55a2e4599f9cfd8346d0455c3464caa3a46dd
                       Close
                     </button>
                     <button class="btn btn-primary">Post</button>
