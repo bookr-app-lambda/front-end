@@ -125,7 +125,7 @@ export const deleteReview = ( id) => dispatch => {
       console.log('NO ERRORRRRR');
       console.log('LOOk for this ====> ',  res.data );
       dispatch({
-        type: DELETE_SUCCESS,
+        type: DELETE_SUCCESS
         
       });
     })
