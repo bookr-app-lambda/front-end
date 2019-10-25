@@ -9,6 +9,7 @@
   align-items: center;
   padding: 50px;
   box-shadow: 0 5px 10px #ccc;
+  margin-left: 13%;
 }
 
 .input {
@@ -29,4 +30,8 @@ p {
 }
 p span {
   color: blue;
+}
+
+.App {
+  background-color: white;
 }
