@@ -9,7 +9,7 @@ export default function ReviewDelete (props)  {
         
         setTimeout(function(){window.location.reload();
      },1000);}
-
+     
     console.log(props.review.id);
         return (
         <div className="comment">
