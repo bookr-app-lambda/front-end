@@ -1,8 +1,9 @@
 import React from "react";
 import { connect } from "react-redux";
 import ReactStars from "react-stars";
+import ReviewDelete from '../Reviews/ReviewDelete.js';
 
-import { getSingleBook, addReview } from "../../actions/index";
+import { getSingleBook, addReview, deleteReview } from "../../actions/index";
 import "./Description.css";
 import Nav from "../Nav/Nav";
 import Review from "../Reviews/Reviews";
@@ -74,8 +75,8 @@ class Description extends React.Component {
               return (
                 <div className="comment">
                   {console.log(review)}
-                  {review.review.length > 0 ? (
-                    `${review.username}: ${review.review} ${review.rating}`
+                  {review.review.length > 0 && review.rating >0 ? (
+                    <ReviewDelete deleteThis={this.props.deleteReview} review={review}/>  
                   ) : (
                     <h5>Be the first one to write the review</h5>
                   )}
@@ -99,7 +100,7 @@ const mapStateToProps = state => {
 
 export default connect(
   mapStateToProps,
-  { getSingleBook, addReview }
+  { getSingleBook, addReview,deleteReview }
 )(Description);
 
 //{this.props.book && <p>{this.props.book.title}</p>}

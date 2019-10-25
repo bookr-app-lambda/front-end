@@ -24,6 +24,7 @@ class Reviews extends Component {
     console.log(this.props);
     e.preventDefault();
     this.props.addReview(this.state, this.props.bookId);
+    
   };
 
   render() {
