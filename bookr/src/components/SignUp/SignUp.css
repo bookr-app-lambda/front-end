@@ -1,5 +1,6 @@
 .signup-container {
-  padding: 120px 0;
+  padding: 120px 320px;
+  box-shadow: 0 5px 10px #ccc;
 }
 .form {
   display: flex;
